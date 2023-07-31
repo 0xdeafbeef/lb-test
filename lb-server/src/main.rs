@@ -27,7 +27,7 @@ async fn main() {
         .route("/stats", axum::routing::get(stats))
         .with_state(ctx);
     println!("Listening on 3000");
-    axum_server::bind_rustls("0.0.0.0:3000".parse().unwrap(), config)
+    axum_server::bind_rustls("0.0.0.0:80".parse().unwrap(), config)
         .serve(app.into_make_service())
         .await
         .unwrap();
