@@ -1,0 +1,2 @@
+[workspace]
+members =[ "lb-client", "lb-server"]
